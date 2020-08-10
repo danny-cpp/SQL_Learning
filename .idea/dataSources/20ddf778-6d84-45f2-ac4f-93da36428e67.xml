@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="database">
+  <database-model serializer="dbm" dbms="DB2_LUW" family-id="DB2_LUW" format-version="4.19">
+    <root id="1">
+      <ServerVersion>11.1.44</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="AUDIT"/>
+    <schema id="3" parent="1" name="DB2GSE"/>
+    <schema id="4" parent="1" name="DB2INST1"/>
+    <schema id="5" parent="1" name="DSJOBMGR"/>
+    <schema id="6" parent="1" name="DSSCHED"/>
+    <schema id="7" parent="1" name="DSSHSV1"/>
+    <schema id="8" parent="1" name="DSWEB"/>
+    <schema id="9" parent="1" name="DSWEBSECURITY"/>
+    <schema id="10" parent="1" name="ERRORSCHEMA"/>
+    <schema id="11" parent="1" name="GBR88499">
+      <Current>1</Current>
+    </schema>
+    <schema id="12" parent="1" name="HEALTHMETRICS"/>
+    <schema id="13" parent="1" name="IBMADT"/>
+    <schema id="14" parent="1" name="IBMCONSOLE"/>
+    <schema id="15" parent="1" name="IBMOTS"/>
+    <schema id="16" parent="1" name="IBMPDQ"/>
+    <schema id="17" parent="1" name="IBM_DSM_VIEWS"/>
+    <schema id="18" parent="1" name="IBM_RTMON"/>
+    <schema id="19" parent="1" name="IBM_RTMON_BASELINE"/>
+    <schema id="20" parent="1" name="IBM_RTMON_DATA"/>
+    <schema id="21" parent="1" name="IBM_RTMON_EVMON"/>
+    <schema id="22" parent="1" name="IBM_RTMON_METADATA"/>
+    <schema id="23" parent="1" name="NULLID"/>
+    <schema id="24" parent="1" name="PROCMGMT"/>
+    <schema id="25" parent="1" name="SQLJ"/>
+    <schema id="26" parent="1" name="ST_INFORMTN_SCHEMA"/>
+    <schema id="27" parent="1" name="SYSCAT"/>
+    <schema id="28" parent="1" name="SYSFUN"/>
+    <schema id="29" parent="1" name="SYSIBM"/>
+    <schema id="30" parent="1" name="SYSIBMADM"/>
+    <schema id="31" parent="1" name="SYSIBMINTERNAL"/>
+    <schema id="32" parent="1" name="SYSIBMTS"/>
+    <schema id="33" parent="1" name="SYSPROC"/>
+    <schema id="34" parent="1" name="SYSPUBLIC"/>
+    <schema id="35" parent="1" name="SYSSTAT"/>
+    <schema id="36" parent="1" name="SYSTOOLS"/>
+    <user id="37" parent="1" name="BLUADMIN_MON"/>
+    <user id="38" parent="1" name="DB2INST1"/>
+    <user id="39" parent="1" name="GBR88499"/>
+    <user id="40" parent="1" name="TOM"/>
+    <table id="41" parent="11" name="DEPARTMENTS">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="42" parent="11" name="EMPLOYEES">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="43" parent="11" name="INSTRUCTOR">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="44" parent="11" name="JOBS">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="45" parent="11" name="JOB_HISTORY">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="46" parent="11" name="LOCATIONS">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <table id="47" parent="11" name="PETSALE">
+      <PageFreePercentage>-1</PageFreePercentage>
+    </table>
+    <column id="48" parent="41" name="DEPT_ID_DEP">
+      <Position>1</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="49" parent="41" name="DEP_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="50" parent="41" name="MANAGER_ID">
+      <Position>3</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="51" parent="41" name="LOC_ID">
+      <Position>4</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="52" parent="41" name="SQL200808212418310">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DEPT_ID_DEP</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="53" parent="41" name="SQL200808212418380">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DEPT_ID_DEP</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="42" name="EMP_ID">
+      <Position>1</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="55" parent="42" name="F_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="56" parent="42" name="L_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="57" parent="42" name="SSN">
+      <Position>4</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="58" parent="42" name="B_DATE">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="59" parent="42" name="SEX">
+      <Position>6</Position>
+      <DataType>CHARACTER(1)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="60" parent="42" name="ADDRESS">
+      <Position>7</Position>
+      <DataType>VARCHAR(30)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="61" parent="42" name="JOB_ID">
+      <Position>8</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="62" parent="42" name="SALARY">
+      <Position>9</Position>
+      <DataType>DECIMAL(10,2)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="63" parent="42" name="MANAGER_ID">
+      <Position>10</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="64" parent="42" name="DEP_ID">
+      <Position>11</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="65" parent="42" name="SQL200808212417690">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EMP_ID</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="66" parent="42" name="SQL200808212417770">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EMP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="43" name="INS_ID">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="68" parent="43" name="LAST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="69" parent="43" name="FIRST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="70" parent="43" name="CITY">
+      <Position>4</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="71" parent="43" name="COUNTRY">
+      <Position>5</Position>
+      <DataType>CHARACTER(2)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="72" parent="43" name="SQL200808000709590">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INS_ID</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="73" parent="43" name="SQL200808000709680">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>INS_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="44" name="JOB_IDENT">
+      <Position>1</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="75" parent="44" name="JOB_TITLE">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="76" parent="44" name="MIN_SALARY">
+      <Position>3</Position>
+      <DataType>DECIMAL(10,2)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="77" parent="44" name="MAX_SALARY">
+      <Position>4</Position>
+      <DataType>DECIMAL(10,2)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="78" parent="44" name="SQL200808212418110">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>JOB_IDENT</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="79" parent="44" name="SQL200808212418180">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>JOB_IDENT</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="45" name="EMPL_ID">
+      <Position>1</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="81" parent="45" name="START_DATE">
+      <Position>2</Position>
+      <DataType>DATE|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="82" parent="45" name="JOBS_ID">
+      <Position>3</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="83" parent="45" name="DEPT_ID">
+      <Position>4</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="84" parent="45" name="SQL200808212417900">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EMPL_ID
+JOBS_ID</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="85" parent="45" name="SQL200808212417990">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EMPL_ID
+JOBS_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="46" name="LOCT_ID">
+      <Position>1</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="87" parent="46" name="DEP_ID_LOC">
+      <Position>2</Position>
+      <DataType>CHARACTER(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="88" parent="46" name="SQL200808212418500">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>LOCT_ID
+DEP_ID_LOC</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="89" parent="46" name="SQL200808212418570">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>LOCT_ID
+DEP_ID_LOC</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="90" parent="47" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="91" parent="47" name="ANIMAL">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="92" parent="47" name="QUANTITY">
+      <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="93" parent="47" name="SALEPRICE">
+      <Position>4</Position>
+      <DataType>DECIMAL(6,2)|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <column id="94" parent="47" name="SALEDATE">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+      <SequenceId>-9223372036854775808</SequenceId>
+      <PartitionHashIndex>-1</PartitionHashIndex>
+    </column>
+    <index id="95" parent="47" name="SQL200809215637830">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+      <SchemaName>SYSIBM</SchemaName>
+    </index>
+    <key id="96" parent="47" name="SQL200809215637920">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
