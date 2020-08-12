@@ -1,8 +1,11 @@
 import ibm_db
+import ibm_db_dbi
+import pandas
 
-dsn_hostname = "YourDb2Hostname" # e.g.: "dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net"
-dsn_uid = "YourDb2Username"        # e.g. "abc12345"
-dsn_pwd = "YoueDb2Password"      # e.g. "7dBZ3wWt9XN6$o0J"
+
+dsn_hostname = "" # e.g.: "dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net"
+dsn_uid = ""        # e.g. "abc12345"
+dsn_pwd = ""      # e.g. "7dBZ3wWt9XN6$o0J"
 
 dsn_driver = "{IBM DB2 ODBC DRIVER}"
 dsn_database = "BLUDB"            # e.g. "BLUDB"
@@ -29,4 +32,24 @@ try:
 
 except:
     print("Unable to connect: ", ibm_db.conn_errormsg())
+
+# Start
+
+selectQuery = "select * from INSTRUCTOR"
+
+selectStmt = ibm_db.exec_immediate(conn, selectQuery)
+
+while ibm_db.fetch_row(selectStmt) != False:
+   print(" ID:",  ibm_db.result(selectStmt, 0), " FNAME:",  ibm_db.result(selectStmt, "FIRST_NAME"))
+
+# Using Pandas
+pconn = ibm_db_dbi.Connection(conn)
+
+pdf = pandas.read_sql(selectQuery, pconn)
+
+print(pdf.LAST_NAME)
+
+
+ibm_db.close(conn)
+
 
