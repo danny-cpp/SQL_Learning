@@ -28,9 +28,23 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.15, random
 print("number of test samples:", x_test.shape[0])
 print("number of training samples:",x_train.shape[0])
 
+print("R^2 for linear model")
 RigeModel=Ridge(alpha=0.1)
 RigeModel.fit(x_train, y_train)
 print(RigeModel.score(x_test, y_test))
+
+print("R^2 for deg 2 polynomial")
+pr=PolynomialFeatures(degree=2)
+
+#transform x
+x_train_pr=pr.fit_transform(x_train)
+x_test_pr=pr.fit_transform(x_test)
+
+RigeModel2 = Ridge(alpha=0.1)
+RigeModel2.fit(x_train_pr, y_train)
+print(RigeModel2.score(x_test_pr, y_test))
+
+
 
 
 
